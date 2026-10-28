@@ -16,8 +16,7 @@
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [How it works](#how-it-works)
-- [Tech stack](#tech-stack)
-- [Project structure](#project-structure)
+- [Tech stack and project structure](#tech-stack-and-project-structure)
 - [Getting started](#getting-started)
 - [Configuration](#configuration)
 - [API endpoints](#api-endpoints)
@@ -52,9 +51,9 @@ It works with **Arabic and English**. You can upload an English file and ask in 
 
 ## Screenshots
 
-| splash screen | Chat (light mode) |
+| Splash screen | Chat (light mode) |
 |:---:|:---:|
-| <img src="docs/images/splash.png" alt="Start screen" width="380"> | <img src="docs/images/chat-light.png" alt="Chat in light mode" width="380"> |
+| <img src="docs/images/splash.png" alt="Splash screen" width="380"> | <img src="docs/images/chat-light.png" alt="Chat in light mode" width="380"> |
 
 | Waiting for the answer | Summary (dark mode) |
 |:---:|:---:|
@@ -79,7 +78,7 @@ flowchart LR
 3. **Answer:** Google Gemini receives those passages and your question, with instructions to answer only from them and in the language of the question.
 4. **Summary:** the whole document is sent in one request when it is short enough. Longer documents are cut into parts, each part is summarized, and the summaries are combined into one final summary.
 
-## Tech stack
+## Tech stack and project structure
 
 | Part | Technologies |
 |---|---|
@@ -89,10 +88,8 @@ flowchart LR
 | **Frontend** | Next.js 15 (App Router), React 19, TypeScript |
 | **Design** | Tailwind CSS 4, shadcn/ui (Radix UI), Framer Motion, Lucide icons |
 
-## Project structure
-
 ```
-ai-study-companion/
+BLINK/
 ├── backend/
 │   ├── api.py            # Web API: validates requests and sends them to processing.py
 │   ├── processing.py     # RAG pipeline: read files, search, ask Gemini, summarize
@@ -111,8 +108,6 @@ ai-study-companion/
 ```
 
 ## Getting started
-<ghala-almalki>
-BLINK
 
 ### What you need
 
@@ -123,7 +118,7 @@ BLINK
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/<ghala-almalki>/BLINK.git
+git clone https://github.com/ghala-almalki/ai-study-companion.git
 cd BLINK
 ```
 
@@ -174,7 +169,7 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:3000**, click the start screen, upload a file, and ask your first question.
+Open **http://localhost:3000**, click the splash screen, upload a file, and ask your first question.
 
 ## Configuration
 
@@ -228,7 +223,7 @@ Please read these points:
 - The search index is kept **in memory**, so it is rebuilt after the backend restarts.
 - Very long documents take longer to summarize, because they are summarized in several steps.
 - The free Gemini tier has usage limits. If you hit them, wait a little or use another model.
-- The frontend uses Next.js 15. `npm audit` may report a PostCSS advisory inside Next.js that is only fixed in Next.js 16 (an upgrade is planned).
+- The frontend uses Next.js 15. `npm audit` may report a PostCSS advisory inside Next.js that is only fixed in Next.js 16.
 
 ## Troubleshooting
 
@@ -251,4 +246,4 @@ Ideas for the future:
 - [ ] Export the summary as a file
 - [ ] Automated tests
 - [ ] Docker setup
-- [ ] Upgrade to Next.js 16
+- [ ] Upgrade to Next.js 16 (see Limitations)
