@@ -52,7 +52,7 @@ It works with **Arabic and English**. You can upload an English file and ask in 
 
 ## Screenshots
 
-| Start screen | Chat (light mode) |
+| splash screen | Chat (light mode) |
 |:---:|:---:|
 | <img src="docs/images/splash.png" alt="Start screen" width="380"> | <img src="docs/images/chat-light.png" alt="Chat in light mode" width="380"> |
 
