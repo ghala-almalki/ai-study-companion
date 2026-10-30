@@ -89,7 +89,7 @@ flowchart LR
 | **Design** | Tailwind CSS 4, shadcn/ui (Radix UI), Framer Motion, Lucide icons |
 
 ```
-BLINK/
+ai-study-companion/
 ├── backend/
 │   ├── api.py            # Web API: validates requests and sends them to processing.py
 │   ├── processing.py     # RAG pipeline: read files, search, ask Gemini, summarize
@@ -119,7 +119,7 @@ BLINK/
 
 ```bash
 git clone https://github.com/ghala-almalki/ai-study-companion.git
-cd BLINK
+cd ai-study-companion
 ```
 
 ### 2. Set up the backend
